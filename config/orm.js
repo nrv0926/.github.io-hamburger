@@ -10,7 +10,8 @@ var orm = {
       cb(res);
     });
   },
-
+  // inserts new row
+  //
   insertOne: (table, objColsVals, cb) => {
     query = `INSERT INTO ${table} SET ?`;
     connection.query(query, objColsVals, (err, res) => {
